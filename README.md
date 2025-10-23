@@ -67,3 +67,16 @@ Funcionalidades principales:
 ⦁Conoceremos el tamaño del barco cuando todas sus posiciones hayan sido alcanzadas. Se mostrará un texto en pantalla de barco hundido.
 ⦁Si el resultado de la posición indicada es un error, entonces se pasará el turno y se indicará en un texto: "¡Mala suerte!. Has perdido tu turno".
 ⦁El juego finalizará cuando alguno de los dos jugadores haya hundido todos los barcos de su contrincante.
+
+## Detalle variantes
+
+Se incluye un archivo python con el detalle de las variantes: variantes.py
+Como observaciones principales de este archivo se destaca:
+-tamaño del tablero
+-posiciones de barco, impacto, error
+-uso de secuencias ANSI para identificar el color rojo del impacto en el
+tablero de defensa del jugador 1
+-configuración de la flota (3x2) + (2x3) + (1x4)
+-el uso de pickle para guardar archivos para poder reanudar la partida desde un punto fijo.
+
+## Detalle funciones
