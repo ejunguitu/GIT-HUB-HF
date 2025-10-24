@@ -1,4 +1,11 @@
 
+""" 
+A continuación se detallan las bibliotecas de funciones para el juego (ver dabajo).
+Se usan dos bibliotecas estándar de Python: random y pickle.
+Una biblioteca personalizada llamada variantes.py contiene constantes y configuraciones del juego.
+Y se importa el módulo os para interactuar con el sistema operativo. Se usa para comprobar 
+si existe un archivo de partida guardada y para eliminarlo al final:
+"""
 import random
 import pickle
 import os
@@ -6,14 +13,14 @@ from variantes import filas, columnas, agua, Fallo, tocado, barco, letras_column
 
 
 """ 
-Se han implementado las funciones necesarias para gestionar el juego Hundir la Flota.
+Se han implementado las funciones necesarias para gestionar el juego El Hombre contra la máquina.
 Estas funciones incluyen la creación y visualización de tableros, la colocación de barcos
 tanto manual como automática, la gestión de los turnos de ataque, y la funcionalidad de
 guardar y cargar partidas.
 """
 
 """
-Funciones auxiliares para la gestión del juego Hundir la Flota.
+Funciones auxiliares para la gestión del juego El Hombre contra la máquina.
 Estas funciones incluyen la creación y visualización de tableros,
 la conversión de letras a índices, y la validación de celdas.
 """
@@ -23,17 +30,17 @@ Crea un tablero vacío con agua.
 """
 def crear_tablero():
     return [[agua for _ in range(columnas)] for _ in range(filas)]
-
-"""
+            
+""" 
 Devuelve el símbolo a mostrar para una celda. 
 Se mostrará el símbolo X en rojo si es tocado.
 Se utiliza el método f-string para incluir los códigos ANSI.
-Se utiliza el método isinstance para verificar si la celda contiene un identificador de barco.
-Se utiliza el método str.startswith para verificar si la celda contiene un identificador de barco.
+Se utiliza el método isinstance y str.startswithpara para verificar si la celda 
+contiene un identificador de barco.
 La "P" indica un barco del jugador y la "E" un barco de la máquina.
 """
 def valor_mostrar_celda(celda):
-    if celda == tocado:
+    if celda == tocado:        
         return f"{ANSI_ROJO}{tocado}{ANSI_RESET}"
     if celda == Fallo:
         return Fallo
@@ -45,7 +52,9 @@ def valor_mostrar_celda(celda):
 
 """
 Imprime los tableros del jugador lado a lado.
-Se han considerado dos tableros: el de defensa (con barcos) y el de ataque (sin barcos).
+Se han considerado dos tableros: 
+-el de defensa (con barcos) y 
+-el de ataque (sin barcos).
 Además se ha añadido una cabecera para identificar cada tablero.
 """
 def imprimir_tableros_lado(tablero_defensa, tablero_ataque, alias_jugador, mostrar_barcos=False):
@@ -56,12 +65,10 @@ def imprimir_tableros_lado(tablero_defensa, tablero_ataque, alias_jugador, mostr
     for i in range(filas):
         fila_def = " ".join(
             valor_mostrar_celda(c if mostrar_barcos else (c if c in (tocado, Fallo, agua) else agua))
-            for c in tablero_defensa[i]
-        )
+            for c in tablero_defensa[i])
         fila_atq = " ".join(
             tocado if c == tocado else Fallo if c == Fallo else agua
-            for c in tablero_ataque[i]
-        )
+            for c in tablero_ataque[i])
         print(f"{i+1:2} {fila_def}{espacio_entre_tableros}{i+1:2} {fila_atq}")
     print()
 
@@ -82,7 +89,8 @@ def celda_valida(fila, columna):
 """" 
 Se ha considerado oportuno incluir funciones que devuelvan las posiciones vecinas. 
 Se entienden por posiciones vecinas aquellas que rodean una celda dada, incluyendo las diagonales.
-Esto es útil para validar la colocación de barcos y para marcar las celdas alrededor de un barco hundido.
+Esto es útil para validar la colocación de barcos y para marcar 
+las celdas alrededor de un barco hundido.
 """
 def vecinas(fila, columna):
     posiciones_vecinas = []
@@ -111,13 +119,9 @@ def celdas_alrededor(posiciones):
 """ 
 Se han generado funciones relacionadas con la colocación de barcos, tanto manual como automática,
 y la gestión de ataques y turnos.
-"""
-""" 
 Para la colocación de barcos, se han creado funciones para validar posiciones, 
 crear barcos, y colocar barcos en el tablero.
-"""
-"""
-Crea un diccionario que representa un barco.
+Se ha creado un diccionario que representa un barco.
 """
 def crear_barco(id_, tamaño, posiciones):
     return {"id": id_, "tamaño": tamaño, "posiciones": posiciones.copy(), "impactos": set()}

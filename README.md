@@ -80,3 +80,106 @@ tablero de defensa del jugador 1
 -el uso de pickle para guardar archivos para poder reanudar la partida desde un punto fijo.
 
 ## Detalle funciones
+
+Como paso inicial, se detallan las bibliotecas estándares y personalizadas que se utilizan en el juego:
+-Random; para crear los barcos y los impactos de la máquina.
+-Pickle y os; para guardar e identificar el archvio que contiene la jugada para reanudar la partida.
+-Variantes; personalizada a los detalles considerados en el punto anterior.
+
+Se crean funciones auxiliares para:
+-la creación y visualización de tableros
+-la colocación de los barcos (inputs jugador y aleatoria random)
+-la gestión de turnos
+-la funcionalidad guardar
+
+Adicionalmente, se crean las funciones para:
+-crear un tablero de juego a partir de un tablero vacío.
+Se creará un tablero para los barcos del jugador (P), y
+otro para los barcos de la máquina (E).El jugador deberá introducir:
+posición fila+columna+dirección (H/V).
+-se imprimen los tableros para el jugador (defensa/sus barcos - y ataque).
+Además se parametrizan las funciones para convertir la letra de la columna
+del tablero en índice numérico.
+-se crean las funciones para identificar las posiciones que rodean a un barco "posiciones vecinas":(arriba, abajo y diagonal). El objetivo es
+colocar los barcos y evitar colisiones.
+-se crean las funciones relacionadas con turnos y ataques.
+Según las posiciones de los impactos se conocerá si todos los barcos
+han sido hundidos.
+
+## Main Juego
+
+En este apartado se parametrizan las funciones para el juego:
+-alias de jugador
+-tablero defensa jugador(inputs)
+-posición de barcos jugador(colocación)
+-tablero ataque jugador.
+-posición de barcos máquina (random)
+-tablero de ataque de la máquina
+-tabler de defensa de la máquina
+-turnos (elegir turno; random.choice)
+-contador de turnnos
+-abandonar partida (SALIR)
+-todos los barcos hudidos máquina: victoria jugador.
+-todos los barcos hundidos jugador: game over.
+-ejecución juego principal
+
+## Esquema funcional del juego
+
+VARIABLES GLOBALES
+-filas, columnas, letras_columnas
+-símbolos: agua "_", barco "O", tocado "X", fallo "."
+-colores ANSI (rojo, reset)
+-flota = [2, 2, 2, 3, 3, 4]
+-archivo_guardado (ej: "partida.pkl")
+
+FUNCIONES AUXILI
+VARIABLES GLOBALES
+-filas, columnas, letras_columnas
+-símbolos: agua "_", barco "O", tocado "X", fallo "."
+-colores ANSI (rojo, reset)
+-flota = [2, 2, 2, 3, 3, 4]
+-archivo_guardado (ej: "partida.pkl")
+
+FUNCIONES AUXILIARES
+-crear_tablero()
+-valor_mostrar_celda(celda)
+-imprimir_tableros_lado(defensa, ataque, alias)
+-letra_a_indice(letra)
+-celda_valida(f, c)
+-vecinas(f, c) / celdas_alrededor(f, c)
+
+CREACIÓN Y GESTIÓN DE BARCOS
+-crear_barco(id, tamaño, posiciones)
+-posiciones_colisionan(posiciones, otros_barcos)
+-se_puede_colocar(posiciones, barcos_existentes)
+-colocar_barco_en_tablero(tablero, barco)
+-colocar_cobertura_en_tablero(tablero, barco)
+
+COLOCACIÓN DE BARCOS (JUGADOR / MÁQUINA)
+-colocar_barcos_manual(jugador): pide fila, columna, orientación H/V o SALIR
+-colocar_barcos_aleatorio_maquina(): genera coordenadas válidas aleatorias
+
+ATAQUES
+-recibir_ataque(f, c, barcos, tablero_defensa): devuelve: 'impacto', 'fallo'
+-todos_barcos_hundidos(barcos)
+
+TURNOS DE JUEGO
+-turno_jugador(tab_atq, barcos_enem, tab_def_enem)
+-turno_maquina(tab_atq_M, barcos_J, tab_def_J)
+*gestionan input, impacto/fallo
+
+GUARDAR Y CARGAR PARTIDA
+-guardar_partida(estado):pickle.dump
+-cargar_partida():pickle.load
+
+FLUJO JUEGO PRINCIPAL
+1.¿Existe partida guardada?: cargar o nueva
+2.Pedir alias al jugador
+3.Colocar barcos jugador
+4.Colocar barcos máquina
+5.Moneda al aire: gestión del turno
+6.Bucle de turnos: -turno_jugador() o turno_maquina()
+7 Mostrar tableros finales y borrar guardado
+
+¿usuario escribe SALIR?: guardar y salir
+¿barcos hundidos?: fin de partida.
