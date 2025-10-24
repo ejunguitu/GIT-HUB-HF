@@ -115,7 +115,7 @@ En este apartado se parametrizan las funciones para el juego:
 -tablero ataque jugador.
 -posición de barcos máquina (random)
 -tablero de ataque de la máquina
--tabler de defensa de la máquina
+-tablero de defensa de la máquina
 -turnos (elegir turno; random.choice)
 -contador de turnnos
 -abandonar partida (SALIR)
@@ -126,13 +126,12 @@ En este apartado se parametrizan las funciones para el juego:
 ## Esquema funcional del juego
 
 VARIABLES GLOBALES
--filas, columnas, letras_columnas
--símbolos: agua "_", barco "O", tocado "X", fallo "."
--colores ANSI (rojo, reset)
--flota = [2, 2, 2, 3, 3, 4]
--archivo_guardado (ej: "partida.pkl")
+*filas, columnas, letras_columnas
+*símbolos: agua "_", barco "O", tocado "X", fallo "."
+*colores ANSI (rojo, reset)
+*flota = [2, 2, 2, 3, 3, 4]
+*archivo_guardado (ej: "partida.pkl")
 
-FUNCIONES AUXILI
 VARIABLES GLOBALES
 -filas, columnas, letras_columnas
 -símbolos: agua "_", barco "O", tocado "X", fallo "."
