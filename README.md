@@ -85,7 +85,6 @@ tablero de defensa del jugador 1
 - configuración de la flota (3x2) + (2x3) + (1x4)
 - el uso de pickle para guardar archivos para poder reanudar la partida desde un punto fijo.
 
-
 ## Detalle funciones
 
 Como paso inicial, se detallan las bibliotecas estándares y personalizadas que se utilizan en el juego:
@@ -190,7 +189,7 @@ FLUJO JUEGO PRINCIPAL
 4. Colocar barcos máquina
 5. Moneda al aire: gestión del turno
 6. Bucle de turnos: -turno_jugador() o turno_maquina()
-7  Mostrar tableros finales y borrar guardado
+7. Mostrar tableros finales y borrar guardado
 
 ¿usuario escribe SALIR?: guardar y salir
 ¿barcos hundidos?: fin de partida.
