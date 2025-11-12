@@ -1,0 +1,38 @@
+
+
+# === FIGURA ===
+figure.figsize : 8, 5
+figure.dpi : 120
+figure.autolayout : True
+
+# === COLORES ===
+axes.facecolor : #FAFAFA
+figure.facecolor : #FFFFFF
+axes.edgecolor : #4B5563
+axes.prop_cycle : cycler('color', ['#2E8B57', '#1E40AF', '#9ACD32', '#4B5563'])
+
+# === LÍNEAS ===
+lines.linewidth : 2.0
+lines.markersize : 7
+
+# === FUENTES ===
+font.family : sans-serif
+font.sans-serif : DejaVu Sans, Arial, Helvetica
+axes.titlesize : 14
+axes.labelsize : 12
+xtick.labelsize : 10
+ytick.labelsize : 10
+
+# === LEYENDAS ===
+legend.frameon : False
+legend.fontsize : 10
+legend.loc : best
+
+# === ESTRUCTURA ===
+axes.grid : True
+grid.color : #E5E7EB
+grid.linestyle : --
+grid.linewidth : 0.6
+
+# === RELACIÓN DE ASPECTO ===
+axes.aspect : auto
