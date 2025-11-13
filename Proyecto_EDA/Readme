@@ -1,25 +1,8 @@
-{
- "cells": [
-  {
-   "cell_type": "markdown",
-   "id": "2963e8b5",
-   "metadata": {},
-   "source": [
-    "\n",
-    "![Pan](img/Imagen_principal_proyecto_EDA_Pan.jpg)\n",
-    "\n",
-    "\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "bf1780b1",
-   "metadata": {},
-   "source": [
-    "\n",
+[Pan](img/Imagen_principal_proyecto_EDA_Pan.jpg)\n",
+
     "# Introducción al análisis:   \n",
     "\n",
-    "En el proyecto que se pretende desarrollar se persigue conocer cuál es el indicador que mayor incidencia tiene en el precio del pan.  \n",
+En el proyecto que se pretende desarrollar se persigue conocer cuál es el indicador que mayor incidencia tiene en el precio del pan.
     "El pan forma parte de la llamada cesta de la compra y, por lo tanto, tiene influencia directa en el Índice de Precios al Consumidor (IPC), ya que el IPC mide la variación del precio de una cesta de bienes y servicios representativa del consumo de los hogares.  \n",
     "El precio del pan, como el de otros productos, se tiene en cuenta en el cálculo del IPC para reflejar el coste total de la cesta y su evolución.  \n",
     "\n",
