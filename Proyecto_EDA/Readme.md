@@ -1,43 +1,22 @@
-{
- "cells": [
-  {
-   "cell_type": "markdown",
-   "id": "2963e8b5",
-   "metadata": {},
-   "source": [
-    "\n",
-    "![Pan](img/Imagen_principal_proyecto_EDA_Pan.jpg)\n",
-    "\n",
-    "\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "bf1780b1",
-   "metadata": {},
-   "source": [
-    "\n",
-    "# Introducción al análisis:   \n",
-    "\n",
-    "En el proyecto que se pretende desarrollar se persigue conocer cuál es el indicador que mayor incidencia tiene en el precio del pan.  \n",
-    "El pan forma parte de la llamada cesta de la compra y, por lo tanto, tiene influencia directa en el Índice de Precios al Consumidor (IPC), ya que el IPC mide la variación del precio de una cesta de bienes y servicios representativa del consumo de los hogares.  \n",
+[Pan](img/Imagen_principal_proyecto_EDA_Pan.jpg)
+    
+    # Introducción al análisis:  
+    
+    En el proyecto que se pretende desarrollar se persigue conocer cuál es el indicador que mayor incidencia tiene en el precio del pan.  
+
+    El pan forma parte de la llamada cesta de la compra y, por lo tanto, tiene influencia directa en el Índice de Precios al Consumidor (IPC), ya que el IPC mide la variación del precio de una cesta de bienes y servicios representativa del consumo de los hogares. 
+
     "El precio del pan, como el de otros productos, se tiene en cuenta en el cálculo del IPC para reflejar el coste total de la cesta y su evolución.  \n",
     "\n",
     "A lo largo de este proyecto vamos a analizar los factores que pueden influir en el precio del pan considerando el aumento significativo que ha experimentado en los últimos años, así como su impacto directo en el poder adquisitivo de la población en España. En este sentido, vamos a plantear varias hipótesis bajo los supuestos de la identificación de algunos de los principales factores que se han considerado más relevantes, tales como: \n",
-    "- Los factores externos coyunturales derivados de la situación geopolítica mundial. \n",
-    "- Las nuevas tendencias en los hábitos de consumo. \n",
-    "- El cambio climático.\n",
-    "- La política comunitaria en la UE."
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "6b6027f4",
-   "metadata": {},
-   "source": [
-    "## Hipótesis planteadas: \n",
-    "\n",
-    "La receta del pan es sencilla : harina y agua.   \n",
+    - Los factores externos coyunturales derivados de la situación geopolítica mundial.
+    - Las nuevas tendencias en los hábitos de consumo.
+    - El cambio climático.
+    - La política comunitaria en la UE.
+
+    ## Hipótesis planteadas:
+    
+    La receta del pan es sencilla : harina y agua.   \n",
     "Vamos a centrar nuestro estudio en la materia prima principal para la elaboración del pan como base de nuestro análisis: la HARINA. \n",
     "\n",
     "A continnuación se enumeran las hipótesis del estudio: \n",
@@ -71,16 +50,9 @@
     "### Pan : receta :\n",
     "\n",
     "Los ingredientes básicos, y necesarios para la elaboración del pan son solo dos: harina y agua.  \n",
-    "La sal es un componente opcional que se emplea para dar sabor y fortalecer la masa.\n",
-    "\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "1214b9c2",
-   "metadata": {},
-   "source": [
-    "### Tipos de trigo: \n",
+    "La sal es un componente opcional que se emplea para dar sabor y fortalecer la masa.
+
+    ### Tipos de trigo: \n",
     "\n",
     "El trigo es uno de los cereales más consumidos en todo el mundo y es un alimento básico en muchas culturas. Sin embargo, no todo el trigo se crea igual. Hay dos tipos principales de trigo: duro y blando.\n",
     "\n",
@@ -94,14 +66,10 @@
     "A diferencia del trigo duro, el trigo blando tiene un contenido de proteína más bajo y un contenido de gluten más bajo. Esto lo hace más adecuado para productos que requieren una textura más tierna, como tortas y pasteles.  \n",
     "El trigo blando también es más versátil que el trigo duro y se puede utilizar en una amplia variedad de productos. Además de pasteles y pastas, el trigo blando se usa a menudo en productos como galletas dulces y saladas y cereales para el desayuno.\n",
     "\n",
-    "https://es.wikipedia.org/wiki/Pan#:~:text=Los%20ingredientes%20b%C3%A1sicos%2C%20y%20necesarios,sabor%20y%20fortalecer%20la%20masa."
+    https://es.wikipedia.org/wiki/Pan#:~:text=Los%20ingredientes%20b%C3%A1sicos%2C%20y%20necesarios,sabor%20y%20fortalecer%20la%20masa.
    ]
   },
-  {
-   "cell_type": "markdown",
-   "id": "da177f2e",
-   "metadata": {},
-   "source": [
+
     "### Precio del pan : \n",
     "\n",
     "IPCA: El Índice de Precios de Consumo Armonizado (IPCA) es un indicador de inflación común que permite comparaciones entre los países de la Unión Europea.  \n",
